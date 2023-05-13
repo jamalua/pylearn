@@ -20,4 +20,3 @@ class Staff:
 officeStaff1 = Staff('Basic','Jamal', 10)
 print(officeStaff1.calculatePay())
 print(officeStaff1)
-
