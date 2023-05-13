@@ -145,9 +145,10 @@ https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ36B9SuYRGTkR
 
 
 import xml.etree.cElementTree as ET
-"""
+
 
 class PartyAnimal:
+
     x = 0
 
     def party(self):
@@ -165,4 +166,12 @@ print("Dir ", dir(an))
 print("Type ", type(an.x))
 print("Type", type(an.party))
 
+"""
 
+names = ['joe', 'jean', 'marcel', 'eric']
+
+def last_letter(name):
+    return name[-1]
+
+names.sort(key=last_letter)
+print(names)

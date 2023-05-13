@@ -1,0 +1,75 @@
+resource: /helloworld
+path: /helloworld
+httpMethod: GET
+headers:
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+  accept-encoding: 'gzip, deflate, br'
+  accept-language: 'en-GB,en;q=0.5'
+  Host: mdfgc31pu2.execute-api.eu-west-1.amazonaws.com
+  upgrade-insecure-requests: '1'
+  User-Agent: >-
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101
+    Firefox/77.0
+  X-Amzn-Trace-Id: Root=1-5ee5748c-c81bb9815a6642068137a587
+  X-Forwarded-For: 31.51.228.205
+  X-Forwarded-Port: '443'
+  X-Forwarded-Proto: https
+multiValueHeaders:
+  accept:
+    - 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+  accept-encoding:
+    - 'gzip, deflate, br'
+  accept-language:
+    - 'en-GB,en;q=0.5'
+  Host:
+    - mdfgc31pu2.execute-api.eu-west-1.amazonaws.com
+  upgrade-insecure-requests:
+    - '1'
+  User-Agent:
+    - >-
+      Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101
+      Firefox/77.0
+  X-Amzn-Trace-Id:
+    - Root=1-5ee5748c-c81bb9815a6642068137a587
+  X-Forwarded-For:
+    - 31.51.228.205
+  X-Forwarded-Port:
+    - '443'
+  X-Forwarded-Proto:
+    - https
+queryStringParameters: null
+multiValueQueryStringParameters: null
+pathParameters: null
+stageVariables: null
+requestContext:
+  resourceId: u7sbzn
+  resourcePath: /helloworld
+  httpMethod: GET
+  extendedRequestId: OF8mCH_MjoEFl5g=
+  requestTime: '14/Jun/2020:00:51:24 +0000'
+  path: /jamal-testStage/helloworld
+  accountId: '354149775542'
+  protocol: HTTP/1.1
+  stage: jamal-testStage
+  domainPrefix: mdfgc31pu2
+  requestTimeEpoch: 1592095884986
+  requestId: bd4da38a-fcc1-48c3-9a36-48342d185111
+  identity:
+    cognitoIdentityPoolId: null
+    accountId: null
+    cognitoIdentityId: null
+    caller: null
+    sourceIp: 31.51.228.205
+    principalOrgId: null
+    accessKey: null
+    cognitoAuthenticationType: null
+    cognitoAuthenticationProvider: null
+    userArn: null
+    userAgent: >-
+      Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101
+      Firefox/77.0
+    user: null
+  domainName: mdfgc31pu2.execute-api.eu-west-1.amazonaws.com
+  apiId: mdfgc31pu2
+body: null
+isBase64Encoded: false

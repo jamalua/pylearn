@@ -1,0 +1,16 @@
+"""
+Some doc
+"""
+import re
+
+
+def camel_case(word: str) -> str | None:
+    """
+    Some doc
+    """
+    return "".join([l.capitalize() for l in word.replace("-", "_").split("_")])
+
+
+the_string = "the_stealth_warrior"
+
+print(camel_case(the_string))

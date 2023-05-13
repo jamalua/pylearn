@@ -1,0 +1,13 @@
+---
+- name: Remove vsftpd server
+  host: client1
+  tasks:
+  - name: stop the service
+    service:
+      name: vsftpd
+      state: stopped
+  - name: Uninst vsftpd server
+    apt:
+      name: vsftpd
+      state: absent
+

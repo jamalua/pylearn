@@ -1,0 +1,12 @@
+---
+- 
+  name: Display the IP address of the hosts
+  hosts: all
+  tasks:
+    -
+      name: SHow IP address
+      debug:
+        msg: >
+          This host uses the IP address {{ ansible_facts.default_ipv4.address}} 
+          
+

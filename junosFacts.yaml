@@ -1,0 +1,26 @@
+---
+  - name: Collecting Junos Facts
+    hosts: ebpcore
+    roles:
+      - Juniper.junos
+    connection: local
+    gather_facts: no
+    
+    vars_prompt:
+      - name: USERNAME
+        prompt: Username => 
+        private: no
+      - name: DEVICE_PASSWORD
+        prompt: Device password => 
+        private: yes
+
+    tasks:
+      - name: Get Junos Device Information
+        juniper_junos_facts:
+          user: "{{ USERNAME }}"
+          passwd: "{{ DEVICE_PASSWORD }}"
+        register: junos_facts
+      
+      - name: Print Junos Facts
+        debug:
+          msg: "{{ junos_facts }}"

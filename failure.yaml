@@ -1,0 +1,13 @@
+---
+  - name: Demonstrating failed-when
+    hosts: all
+    tasks:
+      - name: run a script
+        command: echo hello worls
+        ignore_errors: yes
+        register: command_result
+        failed_when: "'word' in command_result.stdout"
+      
+      - name: Print the stdout message
+        debug:
+          var: command_result
