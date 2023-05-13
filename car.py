@@ -67,9 +67,3 @@ class HumanResource:
             return 'value cannot be less than 0'
         else:
             return value
-
-        
-
-
-
-
