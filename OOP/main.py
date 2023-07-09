@@ -2,7 +2,7 @@ class Item:
     """Description"""
 
     pay_rate = 0.8  # The pay rate after 20% discount
-    all = list()
+    all = []
 
     def __init__(self, name: str, price: float, quantity=0) -> None:
         """Description
