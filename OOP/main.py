@@ -1,3 +1,6 @@
+import csv
+
+
 class Item:
     """Description"""
 
@@ -46,6 +49,15 @@ class Item:
 
     def __repr__(self) -> str:
         return f"Item('{self.name}', {self.price}, {self.quantity})"
+
+    @classmethod
+    def instantiate_from_csv(cls):
+        with open("items.csv", "r") as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+
+        for item in items:
+            item
 
 
 item1 = Item("Phone", 100, 1)
