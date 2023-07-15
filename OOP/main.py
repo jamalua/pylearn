@@ -1,4 +1,6 @@
 import csv
+import os
+import sys
 
 
 class Item:
@@ -52,18 +54,31 @@ class Item:
 
     @classmethod
     def instantiate_from_csv(cls):
-        with open("items.csv", "r") as f:
+        with open(os.path.join(sys.path[0], "items.csv"), "r") as f:
             reader = csv.DictReader(f)
             items = list(reader)
 
         for item in items:
-            item
+            Item(
+                name=item["name"],
+                price=float(item["price"]),
+                quantity=int(item["quantity"])
+            )
+
+    @staticmethod
+    def is_integer(num):
+        if isinstance(num, float):
+            return num.is_integer()
+        if isinstance(num, int):
+            return True
+        return False
 
 
-item1 = Item("Phone", 100, 1)
-item2 = Item("Laptop", 1000, 3)
-item3 = Item("Cable", 10, 5)
-item4 = Item("Mouse", 50, 5)
-item5 = Item("Keyboard", 75, 5)
+# item1 = Item("Phone", 100, 1)
+# item2 = Item("Laptop", 1000, 3)
+# item3 = Item("Cable", 10, 5)
+# item4 = Item("Mouse", 50, 5)
+# item5 = Item("Keyboard", 75, 5)
 
+Item.instantiate_from_csv()
 print(Item.all)
